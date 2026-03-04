@@ -153,4 +153,7 @@
   flex-direction: column-reverse;
   margin-top: 0;
   margin-bottom: var(--space-sm);
+  margin-inline: auto;
+  display: flex;
+  width: fit-content;
 }
