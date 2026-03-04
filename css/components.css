@@ -5,7 +5,7 @@
   border-radius: 4px;
   border: 1px solid var(--color-gold-dim);
   overflow: hidden;
-  cursor: default;
+  cursor: pointer;
   transition: transform var(--transition-mid), border-color var(--transition-mid);
   background:
     radial-gradient(ellipse at top, rgba(44, 36, 24, 0.9), rgba(26, 21, 16, 0.95)),
@@ -115,6 +115,13 @@
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.4), inset 0 0 4px rgba(255, 215, 0, 0.1);
     color: var(--color-gold-bright);
   }
+}
+
+/* ── Card stretch link ── */
+.card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 /* ── Scroll button ── */
