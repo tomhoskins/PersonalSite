@@ -148,3 +148,9 @@
   width: 20px;
   height: 20px;
 }
+
+.scroll-btn--up {
+  flex-direction: column-reverse;
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}

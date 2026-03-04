@@ -48,7 +48,7 @@
     <!-- ══════════════════════════════════════════
          HERO
     ══════════════════════════════════════════ -->
-    <section class="hero" aria-labelledby="hero-name">
+    <section class="hero" id="hero" aria-labelledby="hero-name">
 
       <!-- Parallax background layer -->
       <div class="hero-bg" aria-hidden="true"></div>
@@ -219,6 +219,16 @@
     ══════════════════════════════════════════ -->
     <section class="realms" id="realms" aria-labelledby="realms-title">
       <div class="realms-inner">
+
+        <a href="#hero" class="scroll-btn scroll-btn--up" aria-label="Scroll back to hero">
+          <svg class="scroll-btn-arrow" viewBox="0 0 24 24" fill="none"
+               xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 19 L12 5 M5 11 L12 4 L19 11"
+                  stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="scroll-btn-text">Return to the Keep</span>
+        </a>
 
         <header class="realms-header">
           <h2 class="section-title" id="realms-title">The Three Realms</h2>
