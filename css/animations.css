@@ -55,7 +55,7 @@
              arrow-bounce 2s ease-in-out 2.3s infinite;
 }
 
-.scroll-btn--up .scroll-btn-arrow {
+.scroll-btn--up {
   animation: arrow-bounce-up 2s ease-in-out infinite;
 }
 
