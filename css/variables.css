@@ -1,0 +1,41 @@
+:root {
+  /* ── Colors ── */
+  --color-void: #0A0805;
+  --color-deep-stone: #1A1510;
+  --color-stone: #2C2418;
+  --color-parchment: #C8A96E;
+  --color-parchment-light: #E8D5A3;
+  --color-parchment-bright: #F5ECD7;
+  --color-gold: #D4A017;
+  --color-gold-bright: #FFD700;
+  --color-gold-dim: #8B6914;
+  --color-ember-orange: #FF6B35;
+
+  /* Per-card accents */
+  --color-resume: #D4A017;
+  --color-resume-glow: rgba(212, 160, 23, 0.35);
+  --color-wood: #2D6A2D;
+  --color-wood-glow: rgba(45, 106, 45, 0.35);
+  --color-books: #1E3A5F;
+  --color-books-glow: rgba(30, 58, 95, 0.35);
+
+  /* ── Typography ── */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'EB Garamond', serif;
+
+  /* ── Spacing ── */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* ── Transitions ── */
+  --transition-fast: 200ms ease;
+  --transition-mid: 350ms ease;
+  --transition-slow: 600ms ease;
+
+  /* ── Scroll (set by JS) ── */
+  --scroll-y: 0px;
+}

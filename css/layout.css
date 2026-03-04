@@ -1,0 +1,214 @@
+/* ── Base page ── */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ── Ember canvas ── */
+#ember-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Nav ── */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  gap: var(--space-md);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(10, 8, 5, 0.4);
+}
+
+.nav-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-dim), transparent);
+  max-width: 200px;
+}
+
+/* ── Main content ── */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, #3D2B0A 0%, #1A1008 40%, #0A0805 100%);
+  transform: translateY(calc(var(--scroll-y) * 0.3));
+  z-index: 0;
+}
+
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.hero-crest {
+  width: clamp(80px, 12vw, 140px);
+  height: auto;
+  margin-bottom: var(--space-sm);
+  filter: drop-shadow(0 0 16px rgba(212, 160, 23, 0.4));
+}
+
+.hero-divider {
+  width: clamp(200px, 50vw, 480px);
+  height: auto;
+  opacity: 0.7;
+}
+
+/* ── Candles ── */
+.candle {
+  position: absolute;
+  bottom: 15%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.candle-left  { left: 6%; }
+.candle-right { right: 6%; }
+
+.candle-flame-wrap {
+  position: relative;
+  width: 14px;
+  height: 24px;
+  margin-bottom: -2px;
+}
+
+.candle-flame {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%);
+}
+
+.candle-body {
+  width: 14px;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(180deg, #F0E6C8 0%, #D4C8A0 50%, #B8AA80 100%);
+  position: relative;
+}
+
+.candle-body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 3px;
+  right: 3px;
+  bottom: 0;
+  background: rgba(255,255,255,0.15);
+  border-radius: 1px;
+}
+
+.candle-wax-drip {
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  width: 4px;
+  height: 12px;
+  background: rgba(240, 230, 200, 0.6);
+  border-radius: 0 0 3px 3px;
+}
+
+.candle-base {
+  width: 18px;
+  height: 5px;
+  background: linear-gradient(180deg, #8B7355, #6B5535);
+  border-radius: 2px;
+}
+
+/* ── Realms section ── */
+.realms {
+  background-color: var(--color-deep-stone);
+  position: relative;
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.realms-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.realms-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.realms-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .realms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .realms-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Footer ── */
+.site-footer {
+  background-color: var(--color-void);
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-divider {
+  width: clamp(200px, 60vw, 500px);
+  margin: 0 auto var(--space-lg);
+  opacity: 0.5;
+}

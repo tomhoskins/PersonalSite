@@ -1,0 +1,118 @@
+/* ── Realm Card ── */
+.realm-card {
+  position: relative;
+  padding: var(--space-lg);
+  border-radius: 4px;
+  border: 1px solid var(--color-gold-dim);
+  overflow: hidden;
+  cursor: default;
+  transition: transform var(--transition-mid), border-color var(--transition-mid);
+  background:
+    radial-gradient(ellipse at top, rgba(44, 36, 24, 0.9), rgba(26, 21, 16, 0.95)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  background-blend-mode: normal, overlay;
+}
+
+.realm-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+}
+
+/* Per-card glow overlay */
+.card-glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--transition-mid);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.realm-card:hover .card-glow {
+  opacity: 1;
+}
+
+.card--resume .card-glow {
+  background: radial-gradient(ellipse at bottom, var(--color-resume-glow), transparent 70%);
+}
+
+.card--wood .card-glow {
+  background: radial-gradient(ellipse at bottom, var(--color-wood-glow), transparent 70%);
+}
+
+.card--books .card-glow {
+  background: radial-gradient(ellipse at bottom, var(--color-books-glow), transparent 70%);
+}
+
+/* Corner filigree */
+.card-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  opacity: 0.55;
+}
+
+.card-corner--tl { top: 6px;    left: 6px;  }
+.card-corner--tr { top: 6px;    right: 6px; transform: scaleX(-1); }
+.card-corner--bl { bottom: 6px; left: 6px;  transform: scaleY(-1); }
+.card-corner--br { bottom: 6px; right: 6px; transform: scale(-1);  }
+
+/* Card content */
+.card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-sm);
+}
+
+.card-icon {
+  width: 54px;
+  height: 54px;
+  margin-bottom: var(--space-xs);
+}
+
+.card--resume  .card-icon { color: var(--color-resume); }
+.card--wood    .card-icon { color: var(--color-wood);   }
+.card--books   .card-icon { color: var(--color-books);  }
+
+.card--resume  .card-title { color: #E8C86A; }
+.card--wood    .card-title { color: #6BBF6B; }
+.card--books   .card-title { color: #6B9FD4; }
+
+.card-badge {
+  display: inline-block;
+  padding: 0.25em 0.8em;
+  border: 1px solid var(--color-gold-dim);
+  border-radius: 2px;
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  background: rgba(212, 160, 23, 0.08);
+  animation: badge-shimmer 4s ease-in-out infinite;
+}
+
+/* ── "Coming Soon" badge shimmer ── */
+@keyframes badge-shimmer {
+  0%, 100% {
+    border-color: var(--color-gold-dim);
+    box-shadow: none;
+    color: var(--color-gold);
+  }
+  50% {
+    border-color: var(--color-gold-bright);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4), inset 0 0 4px rgba(255, 215, 0, 0.1);
+    color: var(--color-gold-bright);
+  }
+}

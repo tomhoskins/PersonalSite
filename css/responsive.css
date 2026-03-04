@@ -1,0 +1,39 @@
+/* ── Mobile: < 640px ── */
+@media (max-width: 639px) {
+  .candle {
+    display: none;
+  }
+
+  .hero {
+    padding: calc(var(--space-2xl) + 2rem) var(--space-sm) var(--space-xl);
+  }
+
+  .realms {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .realm-card {
+    padding: var(--space-md);
+  }
+}
+
+/* ── Small tablet: 640px – 1023px ── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .candle {
+    display: none;
+  }
+}
+
+/* ── Desktop: 1024px+ ── */
+@media (min-width: 1024px) {
+  .candle {
+    display: flex;
+  }
+}
+
+/* ── Nav spacing ── */
+@media (max-width: 480px) {
+  .nav-rule {
+    max-width: 60px;
+  }
+}

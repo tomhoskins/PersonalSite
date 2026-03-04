@@ -1,0 +1,105 @@
+body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-parchment);
+  background-color: var(--color-void);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+.hero-name {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #FFD700 0%, #D4A017 40%, #8B6914 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(212, 160, 23, 0.5));
+}
+
+.hero-tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--color-parchment-light);
+  letter-spacing: 0.03em;
+}
+
+.hero-bio {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: var(--color-parchment);
+  max-width: 60ch;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--color-parchment-bright);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+  color: var(--color-parchment);
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card-label {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-parchment);
+  opacity: 0.7;
+}
+
+.card-description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-parchment);
+}
+
+.nav-monogram {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+footer p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-parchment);
+  opacity: 0.65;
+}
+
+footer code {
+  font-family: 'Courier New', monospace;
+  color: var(--color-gold);
+  font-size: 0.85em;
+}
